@@ -9,6 +9,7 @@ body{
     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
 }
 
+
 h2{
     color: white;
 }
@@ -21,4 +22,11 @@ img{
     width: 100%;
     margin: 0;
     padding: none;
+}
+
+#mainc{
+    background-color: #222222;
+}
+#dessert{
+    background-color: #222222;
 }
