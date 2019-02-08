@@ -3,20 +3,18 @@ body{
     color: white;
     text-align: center;
 }
-main {
+#secs {
     display: grid;
     grid-gap: .5em;
     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
 }
 
-
+h2{
+    color: white;
+}
 
 article {
     padding: 1em;
-}
-
-#menuItem :hover{
-    border-style: groove;
 }
 
 img{
@@ -24,5 +22,3 @@ img{
     margin: 0;
     padding: none;
 }
-
-.popup
