@@ -34,6 +34,46 @@ function showData(oneObject){
     main.appendChild(clone);
 }
 
+let cat1=document.querySelector("#cat1");
+let cat2=document.querySelector("#cat2");
+let cat3=document.querySelector("#cat3");
+let cat4=document.querySelector("#cat4");
+let cat5=document.querySelector("#cat5");
+let starter=document.querySelector("#starter");
+let sideor=document.querySelector("#sideor");
+let dessert=document.querySelector("#dessert");
+let drinks=document.querySelector("#drinks");
+
+cat1.addEventListener("click", openItem);
+
+function openItem(){
+    starter.classList.toggle("inactive");
+}
+cat2.addEventListener("click", openItem2);
+function openItem2(){
+    mainc.classList.toggle("inactive");
+}
+cat3.addEventListener("click", openItem3);
+function openItem3(){
+    sideor.classList.toggle("inactive");
+}
+cat4.addEventListener("click", openItem4);
+function openItem4(){
+    dessert.classList.toggle("inactive");
+}
+cat5.addEventListener("click", openItem5);
+function openItem5(){
+    drinks.classList.toggle("inactive");
+}
+
+let menu=document.querySelector("#menu");
+
+menu.addEventListener("click", openMenu);
+
+function openMenu(){
+    secs.classList.toggle("inactive");
+}
+
 //**for (let i = 0; i<10; i++){
 //**    let clone = template.cloneNode(true);
 //**    clone.querySelector("h2").textContent="Doggo";

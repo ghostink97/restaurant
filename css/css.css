@@ -10,12 +10,14 @@ body{
     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
 }
 
-a{
+nav a{
     text-decoration: none;
     color: white;
-    display: inline-block;
+    text-align: right;
+    right:0;
+    font-family: 'Wire One', sans-serif;
+    font-size: 1.5em;
     float: right;
-    font-family: Helvetica, sans-serif;
 }
 a :visited{
     color: white;
@@ -48,9 +50,52 @@ img{
     padding: none;
 }
 
-#mainc{
-    background-color: #222222;
+#menuitems h2{
+    cursor: pointer;
 }
-#dessert{
-    background-color: #222222;
+
+.inactive{
+    display: none;
+}
+
+#secs.inactive{
+    display: none;
+}
+
+#menu{
+    cursor: pointer;
+}
+
+article{
+    background-color: #222;
+    margin-top: 1em;
+}
+
+#cat2{
+    padding: 2em;
+    background-color: #222;
+}
+#cat4{
+    padding: 2em;
+    background-color: #222;
+}
+
+h1{
+    font-family: 'Wire One', sans-serif;
+    font-size: 3.5em;
+}
+h2{
+    font-family: 'Wire One', sans-serif;
+    font-size: 1992em:
+}
+h3{
+    font-family: 'Wire One', sans-serif;
+}
+#moreinf{
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    font-family: 'Wire One', sans-serif;
+    font-size: 1.5em;
+    cursor: pointer;
 }
