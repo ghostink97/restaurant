@@ -12,11 +12,11 @@
         <body>
             <header>
                 <nav>
-                    <a href="#" id="logotext">Petrigrad</a>
+                    <a href="#" id="logotext">Petrograd</a>
                     <div id="Navbar">
-                        <div>Our Values</div>
-                        <div>Reservations</div>
-                        <div>Menu</div>
+                        <a href="#table">Reservations</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#values">Our Values</a>
                     </div>
                 </nav>
             </header>
@@ -26,23 +26,25 @@
                     <img src="images/banner-template.png" alt="banner">
                 </picture>
             <main>
-                <h1>Menu</h1>
-                <div id="secs">
-                    <section id="starter">
-                        <h2>Starters</h2>
-                    </section>
-                    <section id="mainc">
-                        <h2>Main Courses</h2>
-                    </section>
-                    <section id="sideor">
-                        <h2>Side Orders</h2>
-                    </section>
-                    <section id="dessert">
-                        <h2>Desserts</h2>
-                    </section>
-                    <section id="drinks">
-                        <h2>Drinks</h2>
-                    </section>
+                <div id="menuitems">
+                    <h1 id="menu">Menu</h1>
+                    <div id="secs">
+                        <section id="starter">
+                            <h2>Starters</h2>
+                        </section>
+                        <section id="mainc">
+                            <h2>Main Courses</h2>
+                        </section>
+                        <section id="sideor">
+                            <h2>Side Orders</h2>
+                        </section>
+                        <section id="dessert">
+                            <h2>Desserts</h2>
+                        </section>
+                        <section id="drinks">
+                            <h2>Drinks</h2>
+                        </section>
+                    </div>
                 </div>
             </main>
             <template>
@@ -50,7 +52,7 @@
                     <img src="" alt="dishpic" id="dishpic">
                     <h2 id="name">Name</h2>
                     <h3 id="price">Price</h3>
-                    <h4 id="readmore">read more</h4>
+                    <a href="#">More Info</a>
                 </article>
             </template>
         <script src="js/js.js"></script>

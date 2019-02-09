@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Wire+One');
 body{
     background-color: #0c0c0e;
     color: white;
@@ -9,9 +10,32 @@ body{
     grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    float: right;
+    font-family: Helvetica, sans-serif;
+}
+a :visited{
+    color: white;
+
+}
+
+#logotext{
+    float: left;
+    font-family: 'Wire One', sans-serif; 
+    font-size: 2em;
+}
+
+header{
+    height: 3.2em;
+    font-family: Helvetica, sans-serif;
+}
 
 h2{
     color: white;
+    font-family: Helvetica, sans-serif;
 }
 
 article {
