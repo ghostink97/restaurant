@@ -3,6 +3,7 @@ body{
     background-color: #0c0c0e;
     color: white;
     text-align: center;
+    margin-bottom: 5em;
 }
 #secs {
     display: grid;
@@ -71,12 +72,21 @@ article{
     margin-top: 1em;
 }
 
+#cat1{
+    margin: 0;
+}
+#cat3{
+    margin: 0;
+}
+#cat5{
+    margin: 0;
+}
 #cat2{
-    padding: 2em;
+    padding: 1em;
     background-color: #222;
 }
 #cat4{
-    padding: 2em;
+    padding: 1em;
     background-color: #222;
 }
 
@@ -86,16 +96,26 @@ h1{
 }
 h2{
     font-family: 'Wire One', sans-serif;
-    font-size: 1992em:
+    font-size: 2.3em;
 }
 h3{
     font-family: 'Wire One', sans-serif;
+    font-size: 2em;
 }
 #moreinf{
     text-align: right;
     text-decoration: none;
     color: white;
     font-family: 'Wire One', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+#readvalues{
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    font-family: 'Wire One', sans-serif;
+    font-size: 1.6em;
     cursor: pointer;
 }

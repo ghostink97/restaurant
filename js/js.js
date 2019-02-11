@@ -74,6 +74,13 @@ function openMenu(){
     secs.classList.toggle("inactive");
 }
 
+const readvalues=document.querySelector("#readvalues");
+const moretext=document.querySelector("#moretext");
+readvalues.addEventListener("click", onpenItemValue);
+function onpenItemValue(){
+    moretext.classList.toggle("inactive");
+}
+
 //**for (let i = 0; i<10; i++){
 //**    let clone = template.cloneNode(true);
 //**    clone.querySelector("h2").textContent="Doggo";
