@@ -76,9 +76,15 @@ function openMenu(){
 
 const readvalues=document.querySelector("#readvalues");
 const moretext=document.querySelector("#moretext");
+const hidevalues=document.querySelector("#hidevalues");
+
 readvalues.addEventListener("click", onpenItemValue);
+hidevalues.addEventListener("click", onpenItemValue);
+
 function onpenItemValue(){
     moretext.classList.toggle("inactive");
+    hidevalues.classList.toggle("inactive");
+    readvalues.classList.toggle("inactive");
 }
 
 //**for (let i = 0; i<10; i++){

@@ -118,4 +118,37 @@ h3{
     font-family: 'Wire One', sans-serif;
     font-size: 1.6em;
     cursor: pointer;
+    margin-bottom: 1em;
+}
+
+#values{
+    display: inline;
+    position: relative;
+    top: 15em;
+}
+p{
+    margin:0;
+    padding: none;
+    text-align: center;
+    display: inline-block;
+}
+#moretext{
+    text-align: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#hidevalues{
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    font-family: 'Wire One', sans-serif;
+    font-size: 1.6em;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+#menuitems{
+    display: inline;
+    position: relative;
+    top: 15em;
 }
