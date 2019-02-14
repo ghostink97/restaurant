@@ -1,4 +1,18 @@
 const template = document.querySelector("template").content;
+let cat1=document.querySelector("#cat1");
+let cat2=document.querySelector("#cat2");
+let cat3=document.querySelector("#cat3");
+let cat4=document.querySelector("#cat4");
+let cat5=document.querySelector("#cat5");
+let starter=document.querySelector("#starter");
+let sideor=document.querySelector("#sideor");
+let dessert=document.querySelector("#dessert");
+let drinks=document.querySelector("#drinks");
+const readvalues=document.querySelector("#readvalues");
+const moretext=document.querySelector("#moretext");
+const hidevalues=document.querySelector("#hidevalues");
+const modal=document.querySelector(".modal");
+const lessinf=document.querySelector("#lessinf");
 
 
 fetch("http://kea-alt-del.dk/t5/api/productlist").then(e=>e.json()).then(data=>data.forEach(showData))
@@ -10,6 +24,10 @@ function showData(oneObject){
     clone.querySelector("#price").textContent=oneObject.price;
     clone.querySelector("#dishpic").src="imgs/medium/" + oneObject.image + "-md.jpg";
 
+    const button=document.querySelector("#moreinf");
+clone.querySelector("button").addEventListener("click", ()=>{
+    fetch("http://kea-alt-del.dk/t5/api/productlist").then(e=>e.json()).then(data=>detailsShow(data));
+});
     let main;
     if(oneObject.category=="starter"){
         main = document.querySelector("#starter");
@@ -34,15 +52,7 @@ function showData(oneObject){
     main.appendChild(clone);
 }
 
-let cat1=document.querySelector("#cat1");
-let cat2=document.querySelector("#cat2");
-let cat3=document.querySelector("#cat3");
-let cat4=document.querySelector("#cat4");
-let cat5=document.querySelector("#cat5");
-let starter=document.querySelector("#starter");
-let sideor=document.querySelector("#sideor");
-let dessert=document.querySelector("#dessert");
-let drinks=document.querySelector("#drinks");
+
 
 cat1.addEventListener("click", openItem);
 
@@ -74,9 +84,7 @@ function openMenu(){
     secs.classList.toggle("inactive");
 }
 
-const readvalues=document.querySelector("#readvalues");
-const moretext=document.querySelector("#moretext");
-const hidevalues=document.querySelector("#hidevalues");
+
 
 readvalues.addEventListener("click", onpenItemValue);
 hidevalues.addEventListener("click", onpenItemValue);
@@ -86,6 +94,20 @@ function onpenItemValue(){
     hidevalues.classList.toggle("inactive");
     readvalues.classList.toggle("inactive");
 }
+
+
+function detailsShow(product){
+    console.log(product);
+    modal.querySelector("h1").textContent=product.name;
+    modal.querySelector("#longdesc").textContent=product.longdescription;
+    modal.querySelector("#discount").textContent=product.price-(product.price*product.discount/100);
+    modal.querySelector("img").src="imgs/medium/" + product.image + "-md.jpg";
+    modal.classList.remove("inactive");
+
+}
+
+lessinf.addEventListener("click", ()=>modal.classList.add("inactive"));
+
 
 //**for (let i = 0; i<10; i++){
 //**    let clone = template.cloneNode(true);
