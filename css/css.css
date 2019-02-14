@@ -169,3 +169,17 @@ p{
     display: grid;
     grid-template-columns: 2;
 }
+
+#values h1{
+    margin:0;
+    margin-bottom: .5em;
+}
+
+nav{
+    display: flow-root;
+}
+
+#navbar{
+    display: block;
+    
+}
