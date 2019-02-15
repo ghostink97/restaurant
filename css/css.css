@@ -73,20 +73,30 @@ article{
 
 #cat1{
     margin: 0;
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 #cat3{
     margin: 0;
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 #cat5{
     margin: 0;
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 #cat2{
     padding: 1em;
     background-color: #222;
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 #cat4{
     padding: 1em;
     background-color: #222;
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 
 h1{
@@ -111,6 +121,10 @@ h3{
     cursor: pointer;
     background-color: #222;
     border: none;
+    position: relative;
+    top: 0em;
+    left: 50%;
+    transform: translate(-60%, 0%);
 }
 
 #readvalues{
@@ -241,4 +255,25 @@ nav{
 .vegetarian{
     width:10%;
     float: left;
+}
+
+#sold{
+    background: red;
+    color: white;
+}
+
+table{
+    position: relative;
+    top: 0em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#wine{
+    padding-top: 1em;
+}
+
+@media all and (min-width:768px){
+
+
 }

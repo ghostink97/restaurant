@@ -14,7 +14,7 @@ const moretext=document.querySelector("#moretext");
 const hidevalues=document.querySelector("#hidevalues");
 const modal=document.querySelector(".modal");
 const lessinf=document.querySelector("#lessinf");
-const vegetarian=document.querySelector(".vegetarian");
+const veg=document.querySelector(".vegetarian");
 
 //API shortcuts
 const productlistLink = "http://kea-alt-del.dk/t5/api/productlist";
@@ -30,38 +30,42 @@ function showData(oneObject){
     clone.querySelector("#name").textContent=oneObject.name;
     clone.querySelector("#price").textContent=oneObject.price + " kr.";
     clone.querySelector("#dishpic").src="imgs/medium/" + oneObject.image + "-md.jpg";
+    clone.querySelector("#discount").textContent="discounted price: " + (oneObject.price-(oneObject.price*oneObject.discount/100)) + " kr.";
 
     const button=document.querySelector("#moreinf");
     clone.querySelector("button").addEventListener("click", ()=>{
     fetch(productLink+oneObject.id).then(e=>e.json()).then(data=>detailsShow(data));
         });
 
+        if (oneObject.discount==0){
+            clone.querySelector("#discount").classList.add("inactive");
+        }
+    
     function detailsShow(product){
-        console.log(product);
-        veggieboi(product);  
+        console.log(product); 
         modal.querySelector("h1").textContent=product.name;
         modal.querySelector("#longdesc").textContent=product.longdescription;
         modal.querySelector("#price").textContent=product.price + " kr.";
         modal.querySelector("#discount").textContent="discounted price: " + (product.price-(product.price*product.discount/100)) + " kr.";
         modal.querySelector("img").src="imgs/medium/" + product.image + "-md.jpg";
         modal.classList.remove("inactive");
-    }
-
-    function veggieboi(product){
-        if (product.vegetarian==false){
-            vegetarian.classList.add("inactive");
-        } else {
-            vegetarian.classList.remove("inactive");
-        }
-    }
-
-    function discountboi(product){
         if (product.discount==0){
-            discount.classList.add("inactive");
-        } else {
-            discount.classList.remove("inactive");
+            modal.querySelector("#discount").classList.add("inactive");
         }
     }
+
+    if (oneObject.vegetarian){
+        clone.querySelector(".vegetarian").classList.remove("inactive");
+    }
+
+    if (oneObject.soldout){
+        clone.querySelector("#sold").classList.remove("inactive");
+    }
+
+
+    
+
+   
               
     
 

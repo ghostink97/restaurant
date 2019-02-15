@@ -50,46 +50,75 @@
                     <h1 id="menu">Menu</h1>
                     <div id="secs" class="inactive">
                         <h2 id="cat1">Starters</h2>
-                        <section id="starter" class="inactive">
+                        <section id="starter" class="inactive food">
                         </section>
                         <h2 id="cat2">Main Courses</h2>
-                        <section id="mainc" class="inactive">
+                        <section id="mainc" class="inactive food">
                         </section>
                         <h2 id="cat3">Side Orders</h2>
-                        <section id="sideor" class="inactive">
+                        <section id="sideor" class="inactive food">
                         </section>
                         <h2 id="cat4">Desserts</h2>
-                        <section id="dessert" class="inactive">
+                        <section id="dessert" class="inactive food">
                         </section>
                         <h2 id="cat5">Drinks</h2>
-                        <section id="drinks" class="inactive">
+                        <section id="drinks" class="inactive food">
                         </section>
                     </div>
                 </div>
                 <section id="table">
+                    <img src="imgs/wine-glass.jpg" alt="pic of wine" id="wine">
                     <h1>Reserve a Table</h1>
                     <form action="mailto:angel@angelezrameyer.com" method="POST">
-                        <p>Your Name</p>
-                        <input type="text" name="full name" placeholder="eg. Johnathan J Johnson">
-                        <p>E-mail</p>
-                        <input type="email" name="E-mail" id="mail" placeholder="eg. john@jjohnson.com">
-                        <p>Phone Number</p>
-                        <input type="tel" name="Phone Number" id="phon" placeholder="12 34 56 78">
-                        <p>Number of Guests</p>
-                        <input type="number" name="# of guests" id="num">
-                        <p>Date of visit</p>
-                        <input type="date" name="date of visit" id="date">
-                        <p>Time</p>
-                        <input type="time" name="Time" id="tiem">
-                    </form>
+                            <table>
+                                <tr>
+                                    <td>Your Name</td>
+                                    <td>
+                                        <input type="text" name="full name" placeholder="eg. Johnathan J Johnson"><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail</td> 
+                                    <td>
+                                        <input type="email" name="E-mail" id="mail" placeholder="eg. john@jjohnson.com"><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number</td> 
+                                    <td>
+                                        <input type="tel" name="Phone Number" id="phon" placeholder="12 34 56 78"><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Guests</td>
+                                    <td>
+                                        <input type="number" name="# of guests" id="num"><br>
+                                     </td>                     
+                                </tr>
+                                <tr>
+                                    <td>Date of Visit</td>
+                                    <td><input type="date" name="date of visit" id="date"><br></td>
+                                </tr>
+                                <tr>
+                                    <td>Time of Visit</td>
+                                    <td><input type="time" name="Time" id="tiem"><br></td><br>
+                                </tr>
+                                <tr>
+                                    <td><input type="reset" id="reset" value="Reset"></td>
+                                    <td><input type="submit" value="Sumbit" id="submit"></td>
+                                 </tr>
+                            </table>
+                        </form>
                 </section>
             </main>
             <template>
                 <article id="menuItem">
+                    <h2 class="inactive" id="sold">SOLD OUT</h2>
                     <img src="" alt="dishpic" id="dishpic">
                     <h2 id="name">Name</h2>
                     <h3 id="price">Price</h3>
-                    <img src="imgs/broccoli.png" alt="vegetarian icon" class="vegetarian">
+                    <h3 id="discount">discount</h3>
+                    <img src="images/broccoli.png" alt="" class="vegetarian inactive">
                     <button id="moreinf">More Info</button>
                 </article>
             </template>
