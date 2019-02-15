@@ -275,5 +275,80 @@ table{
 
 @media all and (min-width:768px){
 
+ main section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap:1em;
+ }
+
+#values{
+    display: inline;
+    position: relative;
+    top: 30em;
+}
+#menuitems{
+    display: inline;
+    position: relative;
+    top: 30em;
+}
+
+#table{
+    display: inline;
+    position: relative;
+    top: 30em;
+    padding-bottom: 30em;
+}
+
+#fancytext {
+    font-size: 2em;
+}
+p{
+    font-size: 1.5em;
+}
+
+#hidevalues{
+    font-size: 3em;
+}
+#readvalues{
+    font-size: 3em;
+}
+form{
+    font-size: 1.5em;
+}
+
+nav{
+    font-size: 1.2em;
+}
+}
+
+.modal img{
+    width: 50%;
+}
+@media all and (min-width:1100px){
+    #values{
+        display: inline;
+        position: relative;
+        top: 50em;
+    }
+    #menuitems{
+        display: inline;
+        position: relative;
+        top: 50em;
+    }
+    
+    #table{
+        display: inline;
+        position: relative;
+        top: 50em;
+        padding-bottom: 30em;
+    }
+
+    #moretext{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    .modal img{
+        width: 30%;
+    }
 
 }
