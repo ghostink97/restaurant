@@ -28,7 +28,7 @@ fetch("http://kea-alt-del.dk/t5/api/productlist").then(e=>e.json()).then(data=>d
 function showData(oneObject){
     let clone = template.cloneNode(true);
     clone.querySelector("#name").textContent=oneObject.name;
-    clone.querySelector("#price").textContent=oneObject.price;
+    clone.querySelector("#price").textContent=oneObject.price + " kr.";
     clone.querySelector("#dishpic").src="imgs/medium/" + oneObject.image + "-md.jpg";
 
     const button=document.querySelector("#moreinf");
@@ -38,9 +38,11 @@ function showData(oneObject){
 
     function detailsShow(product){
         console.log(product);
+        veggieboi(product);  
         modal.querySelector("h1").textContent=product.name;
         modal.querySelector("#longdesc").textContent=product.longdescription;
-        modal.querySelector("#discount").textContent=product.price-(product.price*product.discount/100);
+        modal.querySelector("#price").textContent=product.price + " kr.";
+        modal.querySelector("#discount").textContent="discounted price: " + (product.price-(product.price*product.discount/100)) + " kr.";
         modal.querySelector("img").src="imgs/medium/" + product.image + "-md.jpg";
         modal.classList.remove("inactive");
     }
@@ -48,9 +50,19 @@ function showData(oneObject){
     function veggieboi(product){
         if (product.vegetarian==false){
             vegetarian.classList.add("inactive");
+        } else {
+            vegetarian.classList.remove("inactive");
         }
     }
-    veggieboi(oneObject);            
+
+    function discountboi(product){
+        if (product.discount==0){
+            discount.classList.add("inactive");
+        } else {
+            discount.classList.remove("inactive");
+        }
+    }
+              
     
 
     let main;
